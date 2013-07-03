@@ -5,8 +5,9 @@
   2. If user is signed in then  display all users %>
   <% if  @user %>
     <h1>Welcome <%= @user.name  %>!</h1>
+    <h2>You are totally logged in!</h2>
   <% else %>
-    <h2>Current Users</h2>
+    <h2>Current Users (Please Log In!)</h2>
     <% @all_users.each do |user| %>
 
       <p><%= user.name %></p>

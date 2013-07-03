@@ -1,0 +1,11 @@
+<div class="container">
+
+  <h2>Login Failed Please Try Again or Create Account</h2>
+  <% if !@user.valid? %>
+    <p style="color:red"><%= @user.errors.full_messages.join('<br>') %></p>
+  <% end %>
+
+  <p><a href='/sessions/new'>Sign In</a></p>
+  <p><a href='/users/create'>Create New User</a></p>
+
+</div>

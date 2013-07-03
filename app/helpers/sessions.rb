@@ -4,9 +4,11 @@ helpers do
   def current_user
     # TODO: return the current user if there is a user signed in.
     # current ||= User.find()
+    # @current_user = nil
     if session[:user]
-      @current_user ||= User.find(sessions[:user])
+      @current_user ||= User.find(session[:user])
     end
+    # @current_user
   end
 
   def logged_in?
